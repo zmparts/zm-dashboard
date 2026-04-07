@@ -314,14 +314,22 @@ tr:last-child td{border-bottom:none}tr:hover td{background:var(--surface2)}
       <div class="card">
         <div class="card-header">
           <div><div class="card-title">Estoque por SKU</div></div>
-          <div style="display:flex;gap:8px;">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
             <select id="filtro-est" onchange="filtrarEstoque()" style="background:var(--surface2);border:1px solid var(--border2);color:var(--text);padding:5px 10px;border-radius:8px;font-size:12px;outline:none;">
               <option value="todos">Todos</option>
               <option value="sem_estoque">Sem estoque</option>
               <option value="critico">Crítico (&lt;7 dias)</option>
               <option value="comprar">Urgente repor</option>
             </select>
-            <input type="text" id="busca-est" oninput="filtrarEstoque()" placeholder="Buscar..." style="background:var(--surface2);border:1px solid var(--border2);color:var(--text);padding:5px 10px;border-radius:8px;font-size:12px;width:140px;outline:none;">
+            <select id="ordem-est" onchange="filtrarEstoque()" style="background:var(--surface2);border:1px solid var(--border2);color:var(--text);padding:5px 10px;border-radius:8px;font-size:12px;outline:none;">
+              <option value="padrao">Ordenar por...</option>
+              <option value="mais_estoque">Mais estoque</option>
+              <option value="menos_estoque">Menos estoque</option>
+              <option value="mais_urgente">Mais urgente (menos dias)</option>
+              <option value="mais_vendas">Mais vendas 30d</option>
+              <option value="maior_valor">Maior valor em estoque</option>
+            </select>
+            <input type="text" id="busca-est" oninput="filtrarEstoque()" placeholder="Buscar..." style="background:var(--surface2);border:1px solid var(--border2);color:var(--text);padding:5px 10px;border-radius:8px;font-size:12px;width:130px;outline:none;">
           </div>
         </div>
         <div class="tbl-wrap"><table><thead><tr><th>SKU</th><th>Produto</th><th>Variação</th><th>Aptas</th><th>A caminho</th><th>Total</th><th>Vendas 30d</th><th>Dias estoque</th><th>Custo unit.</th><th>Valor total</th></tr></thead><tbody id="tbl-est"></tbody></table></div>
@@ -571,25 +579,36 @@ function nav(name,el){
 }
 
 // ── VENDAS ────────────────────────────────────────────────
+async function buscarTodosOrders(desde){
+  // Paginar a API para buscar todos os pedidos do período
+  let all=[];let offset=0;const limit=50;
+  while(true){
+    const r=await mlApi('/orders/search',`seller=${S.sellerId}&order.status=paid&order.date_created.from=${desde}&sort=date_asc&limit=${limit}&offset=${offset}`);
+    const results=r.results||[];
+    all=all.concat(results);
+    if(results.length<limit)break;
+    offset+=limit;
+    if(offset>500)break; // segurança: max 550 pedidos
+  }
+  return all;
+}
+
 async function carregarVendas(){
   const dias=parseInt(document.getElementById('sel-dias').value);
   if(S.demo){renderVendasDemo(dias);return;}
   if(!S.sellerId){setTimeout(()=>carregarVendas(),1500);return;}
   try{
-    // Buscar dados do período selecionado
     const fromPer=new Date();fromPer.setDate(fromPer.getDate()-dias);
     const dfPer=fromPer.toISOString().split('.')[0]+'.000Z';
-    // Sempre buscar 60 dias para ter hoje, ontem, semana e mês juntos
-    const from60=new Date();from60.setDate(from60.getDate()-60);
-    const df60=from60.toISOString().split('.')[0]+'.000Z';
-    
-    const [rPer, r30] = await Promise.all([
-      mlApi('/orders/search',`seller=${S.sellerId}&order.status=paid&order.date_created.from=${dfPer}&sort=date_desc&limit=50`),
-      dias>30?mlApi('/orders/search',`seller=${S.sellerId}&order.status=paid&order.date_created.from=${df60}&sort=date_desc&limit=50`):null
-    ]);
+    const from30=new Date();from30.setDate(from30.getDate()-30);
+    const df30=from30.toISOString().split('.')[0]+'.000Z';
 
-    const ordersPer=rPer.results||[];
-    const orders60=(r30?.results||ordersPer);
+    // Buscar período selecionado (paginado) + últimos 30 dias para o card de destaque
+    const [ordersPer, orders30raw] = await Promise.all([
+      buscarTodosOrders(dfPer),
+      dias<=30 ? null : buscarTodosOrders(df30)
+    ]);
+    const orders30=orders30raw||ordersPer;
     S.orders=ordersPer;
 
     const todayStr=today();
@@ -598,11 +617,11 @@ async function carregarVendas(){
     const mes30Str=new Date(Date.now()-30*86400000).toISOString().split('T')[0];
     const mesStr=todayStr.substring(0,7);
 
-    const fatHoje=orders60.filter(o=>o.date_created?.startsWith(todayStr)).reduce((a,o)=>a+(o.total_amount||0),0);
-    const pedHoje=orders60.filter(o=>o.date_created?.startsWith(todayStr)).length;
-    const fatOntem=orders60.filter(o=>o.date_created?.startsWith(yesterStr)).reduce((a,o)=>a+(o.total_amount||0),0);
-    const fat7=orders60.filter(o=>o.date_created?.split('T')[0]>=week7Str).reduce((a,o)=>a+(o.total_amount||0),0);
-    const fat30=orders60.filter(o=>o.date_created?.split('T')[0]>=mes30Str).reduce((a,o)=>a+(o.total_amount||0),0);
+    const fatHoje=orders30.filter(o=>o.date_created?.startsWith(todayStr)).reduce((a,o)=>a+(o.total_amount||0),0);
+    const pedHoje=orders30.filter(o=>o.date_created?.startsWith(todayStr)).length;
+    const fatOntem=orders30.filter(o=>o.date_created?.startsWith(yesterStr)).reduce((a,o)=>a+(o.total_amount||0),0);
+    const fat7=orders30.filter(o=>o.date_created?.split('T')[0]>=week7Str).reduce((a,o)=>a+(o.total_amount||0),0);
+    const fat30=orders30.filter(o=>o.date_created?.split('T')[0]>=mes30Str).reduce((a,o)=>a+(o.total_amount||0),0);
     S.fatMes30=fat30;
 
     document.getElementById('fat-hoje').textContent=R$(fatHoje);
@@ -709,8 +728,9 @@ function renderPrecificacao(){
   const tb=document.getElementById('tbl-prec');
   if(!S.anuncios.length){tb.innerHTML='<tr><td colspan="9" class="empty">Sincronize os anúncios primeiro</td></tr>';return;}
   tb.innerHTML=S.anuncios.map(i=>{
-    const sku=i.seller_sku||'';
-    const custo=S.custos[sku]||0;
+    // Tentar múltiplas formas de achar o SKU
+    const sku=i.seller_sku||i.attributes?.find(a=>a.id==='SELLER_SKU')?.value_name||'';
+    const custo=S.custos[sku]||S.custos[sku.toUpperCase()]||0;
     const preco=i.price||0;
     const fixoAuto=custoFixoAuto(preco);
     const fixo=fixoAuto!==null?fixoAuto:(parseFloat(document.getElementById('prec-fixo')?.value)||0);
@@ -883,10 +903,17 @@ function filtrarEstoque(){
   const rows=window._est_rows||[];
   const q=(document.getElementById('busca-est')?.value||'').toLowerCase();
   const f=document.getElementById('filtro-est')?.value||'todos';
+  const ordem=document.getElementById('ordem-est')?.value||'padrao';
   let filtered=rows.filter(r=>(r.sku+r.produto+r.variacao).toLowerCase().includes(q));
   if(f==='sem_estoque')filtered=filtered.filter(r=>r.total===0);
   else if(f==='critico')filtered=filtered.filter(r=>r.diasEst!==null&&r.diasEst<7);
   else if(f==='comprar')filtered=filtered.filter(r=>r.total===0||(r.diasEst!==null&&r.diasEst<15));
+  // Ordenação
+  if(ordem==='mais_estoque')filtered.sort((a,b)=>b.total-a.total);
+  else if(ordem==='menos_estoque')filtered.sort((a,b)=>a.total-b.total);
+  else if(ordem==='mais_urgente')filtered.sort((a,b)=>{const da=a.diasEst??999;const db=b.diasEst??999;return da-db;});
+  else if(ordem==='mais_vendas')filtered.sort((a,b)=>b.v30-a.v30);
+  else if(ordem==='maior_valor')filtered.sort((a,b)=>b.valorEst-a.valorEst);
   const tb=document.getElementById('tbl-est');
   if(!filtered.length){tb.innerHTML='<tr><td colspan="10" class="empty">Nenhum item</td></tr>';return;}
   tb.innerHTML=filtered.map(r=>`<tr><td class="mono" style="font-size:12px;">${r.sku}</td><td>${r.produto.substring(0,38)}</td><td style="color:var(--muted);font-size:12px;">${r.variacao.substring(0,22)}</td><td class="mono">${r.aptas}</td><td class="mono">${r.caminho}</td><td class="mono"><b>${r.total}</b></td><td class="mono">${r.v30}</td><td>${r.dp}</td><td class="mono">${r.custo>0?R$(r.custo):'<span style="color:var(--muted)">—</span>'}</td><td class="mono">${r.valorEst>0?R$(r.valorEst):'—'}</td></tr>`).join('');
