@@ -1,0 +1,541 @@
+{
+  "precificacao": {
+    "5271290020": {
+      "produto": "Filtro De Ar Fiat Tipo 1.6 8v 1993/1997 Tecfil Arl2505",
+      "fornecedor": "CBA",
+      "custo": 5.0,
+      "venda": 25.99,
+      "tarifa": 12.0,
+      "frete": 6.25,
+      "embalagem": 0
+    },
+    "4177710981": {
+      "produto": "Fantasia Infantil Pânico Capa Máscara Amostradinho Halloween",
+      "fornecedor": "Estrelinha Fest",
+      "custo": 44.99,
+      "venda": 78.99,
+      "tarifa": 11.5,
+      "frete": 6.75,
+      "embalagem": 0
+    },
+    "4080175013": {
+      "produto": "Kit 3 Pijama Comprido Longo Infantil Menina 1 A 12 Atacado",
+      "fornecedor": "Ezequiel",
+      "custo": 45.0,
+      "venda": 109.9,
+      "tarifa": 14.0,
+      "frete": 0,
+      "embalagem": 0
+    },
+    "5410257918": {
+      "produto": "Kit 3 Pijama Comprido Longo Infantil Menino 1 A 12 Atacado",
+      "fornecedor": "Ezequiel",
+      "custo": 45.0,
+      "venda": 109.9,
+      "tarifa": 14.0,
+      "frete": 0,
+      "embalagem": 0
+    },
+    "5417859056": {
+      "produto": "Pijama Comprido Longo Infantil Menina 1 A 12 Atacado",
+      "fornecedor": "Ezequiel",
+      "custo": 15.0,
+      "venda": 45.9,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "5417796650": {
+      "produto": "Pijama Comprido Longo Infantil Menino 1 A 12 Atacado",
+      "fornecedor": "Ezequiel",
+      "custo": 15.0,
+      "venda": 45.9,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "5791900618": {
+      "produto": "Kit 4 Pijama Comprido Longo Infantil Menina 1 A 12 Atacado",
+      "fornecedor": "Ezequiel",
+      "custo": 60.0,
+      "venda": 119.9,
+      "tarifa": 14.0,
+      "frete": 16.41,
+      "embalagem": 0
+    },
+    "5792027730": {
+      "produto": "Kit 4 Pijama Comprido Longo Infantil Menino 1 A 12 Atacado",
+      "fornecedor": "Ezequiel",
+      "custo": 60.0,
+      "venda": 119.9,
+      "tarifa": 14.0,
+      "frete": 16.41,
+      "embalagem": 0
+    },
+    "4222512233": {
+      "produto": "Blusa Feminina Camiseta Algodão T-shirt Estampas Atualizadas",
+      "fornecedor": "Kelly",
+      "custo": 12.0,
+      "venda": 29.99,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "4222601319": {
+      "produto": "Cropped Oversized Feminina Algodão Estampas Atualizadas",
+      "fornecedor": "Kelly",
+      "custo": 15.0,
+      "venda": 32.99,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "5742679872": {
+      "produto": "Camiseta Blusa Feminina Plus Size T-shirt Estampada Algodão",
+      "fornecedor": "Kelly",
+      "custo": 16.0,
+      "venda": 35.99,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "5742727390": {
+      "produto": "Camiseta Oversized Feminina Algodão Estampas Atualizadas",
+      "fornecedor": "Kelly",
+      "custo": 25.0,
+      "venda": 49.99,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "4222538685": {
+      "produto": "Kit 3 Blusa Feminina Camiseta Algodão Tshirt Estampas Atuais",
+      "fornecedor": "Kelly",
+      "custo": 36.0,
+      "venda": 78.99,
+      "tarifa": 14.0,
+      "frete": 6.75,
+      "embalagem": 0
+    },
+    "5661034998": {
+      "produto": "Orbi-quimica Trava Parafuso Rosca Prisioneiro Cola Adesiva Trava Parafuso Rosca Vermelho 10g",
+      "fornecedor": "Orbi",
+      "custo": 5.05,
+      "venda": 15.99,
+      "tarifa": 11.5,
+      "frete": 6.25,
+      "embalagem": 0
+    },
+    "4237700531": {
+      "produto": "Orbi-quimica Trava Parafuso Rosca Prisioneiro Cola Adesiva Trava Parafuso Rosca Vermelho 10g",
+      "fornecedor": "Orbi",
+      "custo": 6.71,
+      "venda": 15.99,
+      "tarifa": 14.0,
+      "frete": 6.25,
+      "embalagem": 0
+    },
+    "5660991408": {
+      "produto": "Kit 2 Limpa Ar Condicionado Spray Higienizador Automotivo",
+      "fornecedor": "Orbi",
+      "custo": 16.7,
+      "venda": 35.99,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "5661086676": {
+      "produto": "Cola Adesivo Trava Parafuso Roscas Torque Alto Orbi 10g",
+      "fornecedor": "Orbi",
+      "custo": 6.71,
+      "venda": 15.99,
+      "tarifa": 14.0,
+      "frete": 6.25,
+      "embalagem": 0
+    },
+    "4095223189": {
+      "produto": "Kit 3 Balm Labial Super Poderosas Com Chaveiro Qdb",
+      "fornecedor": "QDB",
+      "custo": 144.24,
+      "venda": 229.99,
+      "tarifa": 12.0,
+      "frete": 22.45,
+      "embalagem": 0
+    },
+    "4103288995": {
+      "produto": "Conjunto Feminino Festa Cropped E Saia Midi Acetinado",
+      "fornecedor": "Sempre Linda",
+      "custo": 106.0,
+      "venda": 229.9,
+      "tarifa": 14.0,
+      "frete": 22.45,
+      "embalagem": 0
+    },
+    "4103300329": {
+      "produto": "Vestido Feminino Festa Tricô Com Franja Ombro Unico Premium",
+      "fornecedor": "Sempre Linda",
+      "custo": 90.0,
+      "venda": 204.99,
+      "tarifa": 14.0,
+      "frete": 23.45,
+      "embalagem": 0
+    },
+    "5452690982": {
+      "produto": "Biquini Infantil Cropped Manga Longa Curta Praia Proteção Uv",
+      "fornecedor": "Splenni",
+      "custo": 18.0,
+      "venda": 52.9,
+      "tarifa": 14.0,
+      "frete": 6.75,
+      "embalagem": 0
+    },
+    "4094534715": {
+      "produto": "Camisa Uv Infantil Proteção Solar Térmica Praia Unissex",
+      "fornecedor": "Splenni",
+      "custo": 12.0,
+      "venda": 29.99,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "5370245696": {
+      "produto": "Sunga Boxer Infantil Moda Praia Piscina Atacado Uv",
+      "fornecedor": "Splenni",
+      "custo": 10.0,
+      "venda": 29.99,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "4206691631": {
+      "produto": "Conjunto Uv Infantil Menino Camisa Sunga Proteção Uv Solar",
+      "fornecedor": "Splenni",
+      "custo": 22.0,
+      "venda": 48.9,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "4206717935": {
+      "produto": "Conjunto Uv Infantil Menina Camisa Duas Peças Proteção Uv",
+      "fornecedor": "Splenni",
+      "custo": 22.0,
+      "venda": 48.9,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "4206729299": {
+      "produto": "Maiô Infantil Manga Longa Body Moda Praia Forro Duplo",
+      "fornecedor": "Splenni",
+      "custo": 23.0,
+      "venda": 52.9,
+      "tarifa": 14.0,
+      "frete": 6.75,
+      "embalagem": 0
+    },
+    "4206765083": {
+      "produto": "Biquini Infantil Top Atacado Moda Praia Sortidos Personagens",
+      "fornecedor": "Splenni",
+      "custo": 8.0,
+      "venda": 25.99,
+      "tarifa": 14.0,
+      "frete": 6.25,
+      "embalagem": 0
+    },
+    "4206726529": {
+      "produto": "Maiô Infantil Atacado Moda Praia Sortido Personagens Menina",
+      "fornecedor": "Splenni",
+      "custo": 10.0,
+      "venda": 29.99,
+      "tarifa": 14.0,
+      "frete": 6.5,
+      "embalagem": 0
+    },
+    "6428122354": {
+      "produto": "Forma Simples Para Chocolate Tabletinho Quadrado Pascoa Cor Branco",
+      "fornecedor": "BWB",
+      "custo": 1.19,
+      "venda": 19.99,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.19
+    },
+    "6428069330": {
+      "produto": "Forma Erótica P/chocolate Especial 3 Partes Ref. 10501 - Bwb Cor Cinza",
+      "fornecedor": "BWB",
+      "custo": 5.28,
+      "venda": 22.9,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "4515998127": {
+      "produto": "Forma Chocolate Cenourinha 150g 3 Partes Páscoa Bwb 10524 Transparente",
+      "fornecedor": "BWB",
+      "custo": 5.28,
+      "venda": 19.99,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "4515959563": {
+      "produto": "Forma Tablete Barra 150g Chocolate 3 Partes Páscoa Bwb 9697",
+      "fornecedor": "BWB",
+      "custo": 5.28,
+      "venda": 19.99,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "4515959571": {
+      "produto": "Forma Tablete Barra 150g Chocolate 3 Partes Páscoa Bwb 9697",
+      "fornecedor": "BWB",
+      "custo": 5.28,
+      "venda": 19.99,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "6428133386": {
+      "produto": "Forma Chocolate Pão De Mel Bumbum Coelho Acetato Bwb Retangular Branco",
+      "fornecedor": "BWB",
+      "custo": 5.28,
+      "venda": 19.99,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "6428060146": {
+      "produto": "Forma Tablete Ovo Coelho 195g 3 Partes Páscoa Bwb 10603 Azul-claro",
+      "fornecedor": "BWB",
+      "custo": 5.28,
+      "venda": 19.99,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "6220048192": {
+      "produto": "Kit 4 Body Cavado Regata Feminino Suplex Cores Essenciais",
+      "fornecedor": "Siangy",
+      "custo": 40.0,
+      "venda": 78.99,
+      "tarifa": 14.0,
+      "frete": 7.75,
+      "embalagem": 0.19
+    },
+    "6219840180": {
+      "produto": "Kit 4 Body Manga Curta Feminino Suplex Cores Essenciais",
+      "fornecedor": "Siangy",
+      "custo": 40.0,
+      "venda": 78.99,
+      "tarifa": 14.0,
+      "frete": 7.75,
+      "embalagem": 0.19
+    },
+    "4515937825": {
+      "produto": "02 Formas Simples Para Chocolate Bombom Quadrado Médio 3593 Cor Branco",
+      "fornecedor": "BWB",
+      "custo": 5.88,
+      "venda": 19.99,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "6249034750": {
+      "produto": "Cropped Brasil Feminino Copa Mundo Top Regata Estampada",
+      "fornecedor": "Siangy",
+      "custo": 10.0,
+      "venda": 25.99,
+      "tarifa": 14.0,
+      "frete": 6.65,
+      "embalagem": 0.19
+    },
+    "6428063304": {
+      "produto": "Forma De Silicone Ovo De Páscoa Liso 50g (3614) Bwb",
+      "fornecedor": "BWB",
+      "custo": 9.76,
+      "venda": 23.99,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "6207413632": {
+      "produto": "Kit Fantasia Carnaval Feminina Body Regata + Saia Fita Color",
+      "fornecedor": "Siangy",
+      "custo": 20.0,
+      "venda": 49.9,
+      "tarifa": 14.0,
+      "frete": 6.65,
+      "embalagem": 0.19
+    },
+    "4515970619": {
+      "produto": "Forma Ovo De Páscoa 350g 3 Partes Casca Lisa Bwb 3618 Sp 50",
+      "fornecedor": "BWB",
+      "custo": 9.76,
+      "venda": 22.49,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "6428020100": {
+      "produto": "Forma Ovo De Páscoa 350g 3 Partes Casca Lisa Bwb 3618 Sp 50",
+      "fornecedor": "BWB",
+      "custo": 9.76,
+      "venda": 22.49,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "4515948163": {
+      "produto": "Forma Especial Silicone Bombom 20g (3 Partes) - Sp 40 - Bwb Cor Branco",
+      "fornecedor": "BWB",
+      "custo": 9.76,
+      "venda": 22.49,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    },
+    "4432908383": {
+      "produto": "Vestido Virginia Tricot Modal Premium Colorido Carnaval Slim",
+      "fornecedor": "Simples Assim",
+      "custo": 48.0,
+      "venda": 78.99,
+      "tarifa": 14.0,
+      "frete": 7.75,
+      "embalagem": 0.19
+    },
+    "6207621198": {
+      "produto": "Saia Fita Colorida Carnaval Metalizada Fantasia Fitilho 40cm",
+      "fornecedor": "Fafa",
+      "custo": 10.0,
+      "venda": 21.99,
+      "tarifa": 14.0,
+      "frete": 6.25,
+      "embalagem": 0
+    },
+    "4476949645": {
+      "produto": "Forma Bwb Especial Para Chocolate Ovo Fatias (3716) Transparente",
+      "fornecedor": "BWB",
+      "custo": 19.85,
+      "venda": 23.5,
+      "tarifa": 11.5,
+      "frete": 6.65,
+      "embalagem": 0.25
+    }
+  },
+  "espelho": [
+    {
+      "fornecedor": "Ezequiel",
+      "sku": "PIJGIRL-GG",
+      "descricao": "COMPRIDO MENINA",
+      "tamanho": "GG",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Ezequiel",
+      "sku": "PIJGIRL-G",
+      "descricao": "COMPRIDO MENINA",
+      "tamanho": "G",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Ezequiel",
+      "sku": "PIJGIRL-P",
+      "descricao": "COMPRIDO MENINA",
+      "tamanho": "P",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Ezequiel",
+      "sku": "PIJGIRL-M",
+      "descricao": "COMPRIDO MENINA",
+      "tamanho": "M",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Ezequiel",
+      "sku": "PIJGIRL-PP",
+      "descricao": "COMPRIDO MENINA",
+      "tamanho": "PP",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Ezequiel",
+      "sku": "PIJBOY-GG",
+      "descricao": "COMPRIDO MENINO",
+      "tamanho": "GG",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Ezequiel",
+      "sku": "PIJBOY-G",
+      "descricao": "COMPRIDO MENINO",
+      "tamanho": "G",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Ezequiel",
+      "sku": "PIJBOY-P",
+      "descricao": "COMPRIDO MENINO",
+      "tamanho": "P",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Ezequiel",
+      "sku": "PIJBOY-M",
+      "descricao": "COMPRIDO MENINO",
+      "tamanho": "M",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Ezequiel",
+      "sku": "PIJBOY-PP",
+      "descricao": "COMPRIDO MENINO",
+      "tamanho": "PP",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Siangy",
+      "sku": "BODY",
+      "descricao": "BODY",
+      "tamanho": "UNICO",
+      "preco": 10.0
+    },
+    {
+      "fornecedor": "Siangy",
+      "sku": "SAIA FITA COLORIDA",
+      "descricao": "SAIA FITA COLORIDA",
+      "tamanho": "UNICO",
+      "preco": 8.5
+    },
+    {
+      "fornecedor": "Siangy",
+      "sku": "",
+      "descricao": "SHORTS",
+      "tamanho": "M",
+      "preco": 15.0
+    },
+    {
+      "fornecedor": "Siangy",
+      "sku": "",
+      "descricao": "CAMISETA",
+      "tamanho": "M",
+      "preco": 10.0
+    },
+    {
+      "fornecedor": "Real Seda",
+      "sku": "",
+      "descricao": "COLAR HAVAIANO",
+      "tamanho": "CX",
+      "preco": 8.15
+    },
+    {
+      "fornecedor": "Real Seda",
+      "sku": "",
+      "descricao": "CONFETE 100G",
+      "tamanho": "CX",
+      "preco": 1.89
+    }
+  ]
+}
